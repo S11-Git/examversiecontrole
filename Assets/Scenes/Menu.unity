@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18384162, g: 0.2285814, b: 0.30076241, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1862,30 +1862,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Osama bin Laden
-
-
-    Bin Laden was the mastermind behind the September
-    11 attacks, which killed nearly 3,000 people. This resulted in the United States
-    invading Afghanistan and launching the war on terror. Bin Laden became the subject
-    of nearly a decade-long international manhunt. During this period, he hid in
-    several mountainous regions of Afghanistan and later escaped to neighboring Pakistan.
-    On 2 May 2011, Bin Laden was killed by U.S. special operations forces at his
-    compound in Abbottabad. His corpse was buried at the Arabian Sea and he was officially
-    succeeded by his deputy Ayman al-Zawahiri on 16 June 2011.
-
-
-
-    Bin Laden grew
-    to become a highly influential ideologue in the Islamic world. He was considered
-    a war hero due to his role in successfully opposing the Soviet occupation of
-    Afghanistan and offered an articulate voice and organizational structure to many
-    across the region harbouring grievances against Western imperialism, often having
-    approval ratings in some countries higher than those of national leaders. Nonetheless,
-    his justification of attacks against civilian targets of the United States made
-    him a divisive figure in the West, and Western critics often denounce him as
-    a mass murderer. His orchestration of the September 11 attacks has made public
-    opinion of him in the United States unequivocally negative. '
+  m_text: "je bent een hol bewoner en moet de verschillende grotten in gaan om eten
+    te vinden je kan appels zo eten maar je moet het vlees koken maar daar moet je
+    ook het vuur voor aan steken gelukkig kan dat met het hout wat ligt naast de
+    grill steen! ga zo snel mogelijk alle grotten langs en zie hoe snel je kan!\r\n\r\nKeybinds:\r\n\r\nWASD:
+    beweging\r\nMUIS: rondkijken \r\nLMUIS: zwaard aanvallen\r\nSPATIE: springen\r\nSHIFT:
+    sprint\r\nF: Lamp\r\nC: het rouwe vlees op de grill plaat leggen\r\nE: teleporteren
+    naar grot / vlees op pakken / hout op pakken en neerleggen bij het kampvuur\r\nG:
+    vlees eten \r\n\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

@@ -22,6 +22,14 @@ public class HungerLogic : MonoBehaviour
     [SerializeField]
     private Text hungerText; // Reference to the Text object
 
+    // Declare a variable to store the initial position
+    private Vector3 initialPosition;
+
+    void Start()
+    {
+        // Store the initial position
+        initialPosition = GetComponent<Rigidbody>().position;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -80,10 +88,14 @@ public class HungerLogic : MonoBehaviour
             if (playerHealth != null)
             {
                 playerHealth.deathCount++;
+                playerHealth.currentHealth = 100f;
 
                 // Update health and death count text
                 playerHealth.UpdateHealthText();
                 playerHealth.UpdateDeathCountText();
+
+                // Reset the player's position
+                GetComponent<Rigidbody>().position = initialPosition;
             }
             else
             {

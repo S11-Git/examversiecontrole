@@ -8,6 +8,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;
     public GameObject Camera;
     public GameObject Player;
+    public GameObject ui;
 
     public static bool GameIsPaused = false;        
 
@@ -30,6 +31,7 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = false;
         Camera.SetActive(false);
         Player.SetActive(true);
+        ui.SetActive(true);
 
         // Make the cursor invisible and lock it
         Cursor.visible = false;
@@ -43,6 +45,7 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = true;
         Camera.SetActive(true);
         Player.SetActive(false);
+        ui.SetActive(false);
 
         // Make the cursor visible and unlock it
         Cursor.visible = true;
