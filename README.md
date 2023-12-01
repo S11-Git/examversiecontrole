@@ -1,5 +1,4 @@
 # examen GameDev
-
 Inleiding 
 Dit is een game die ik gemaakt heb voor het examen basis game development.
 Het survival game die vijanden en een uitdaging heeft maar de grootste uitdaging was de documentatie
@@ -8,15 +7,6 @@ Omschrijving
 Een holbewoner moet overleven in de wereld. Onderweg komt hij vijanden tegen die hij moet 
 Verslaan. Hij verzamelt eten en drinken om te overleven. Als hij alles verzameld heeft gaat hij naar de 
 Volgende grot. Het spel wordt gespeeld in “First Person” perspectief
-
-Main island:
- 
-
-Planning waar de levels op te slaan:
- 
-
-Cave Content:
- 
 
 Potentiële namen voor de videogame: Cave Raider, Holbewoner, Raider of the Cave 
 
@@ -56,6 +46,17 @@ Assets zijn van de unity asset store
 PLANNING:
 Voor het plannen van de game en met een goede stijl opkomen doe ik op de eerste dag.
 Daarna ga ik met de game bezig voor ongeveer een week en dan ga ik de game laten Play testen en bug fixen.
+
+TESTING
+Playtest1 door Rafael:
+Bugs: 
+Speler kan out of bounds springen
+De honger valt onder 0
+
+Playtest2 door rick: 
+Bugs:
+Steak kan gekookt worden zonder steak te pakken 
+Appels kunnen niet gegeten worden 
 
 Leeuwarden 30 november ’23 
 
