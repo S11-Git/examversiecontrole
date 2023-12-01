@@ -1,4 +1,4 @@
-# examversiecontrole
+# examen GameDev
 
 Inleiding 
 Dit is een game die ik gemaakt heb voor het examen basis game development.
