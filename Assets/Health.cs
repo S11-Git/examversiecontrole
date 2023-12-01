@@ -21,14 +21,20 @@ public class Health : MonoBehaviour
 
     public int deathCount = 0; // Counter for player deaths
 
+    // Declare a variable to store the initial position
+    private Vector3 initialPosition;
+
+    // Reference to the HungerLogic script
+    public HungerLogic hungerLogic;
+
     void Start()
     {
         // Initialize current health to max health
         currentHealth = maxHealth;
         UpdateHealthText();
         UpdateDeathCountText();
-
-
+        // Store the initial position
+        initialPosition = GetComponent<Rigidbody>().position;
     }
 
     // Public method to take damage from other scripts
@@ -70,7 +76,8 @@ public class Health : MonoBehaviour
         // Increment the death count
         deathCount++;
         UpdateDeathCountText();
-
+        // Reset the player's position
+        GetComponent<Rigidbody>().position = initialPosition;
 
         // Check if the player has reached the maximum allowed deaths
         if (deathCount >= 3)
@@ -82,8 +89,14 @@ public class Health : MonoBehaviour
         {
             // Reset the player's health for the next attempt
             currentHealth = maxHealth;
+            UpdateHealthText();
+        }
 
-            // Optionally, you can respawn the player or perform other actions here.
+        // Reset the player's hunger
+        if (hungerLogic != null)
+        {
+            hungerLogic.hunger = 100f;
+            
         }
     }
 

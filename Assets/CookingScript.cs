@@ -14,12 +14,13 @@ public class CookingScript : MonoBehaviour
 
     void Update()
     {
-        // Check if the player is in the fireplace trigger area and pressed 'C'
-        if (isCooking && firePlaceLogic != null && firePlaceLogic.IsFireOn && Input.GetKeyDown(KeyCode.C))
+        // Check if the player is in the fireplace trigger area, has steak and pressed 'C'
+        if (HasMeat && firePlaceLogic.IsFireOn && Input.GetKeyDown(KeyCode.C))
         {
             StartCoroutine(CookingTime());
             steak.SetActive(true);
             Debug.Log("C was pressed");
+            HasMeat = false; // The player has placed the meat on the fire
         }
 
         // Check if the player has cooked meat and pressed 'G'
@@ -27,72 +28,16 @@ public class CookingScript : MonoBehaviour
         {
             // Add 60 to the hunger variable in HungerLogic
             hungerLogic.hunger += 60f;
-
-            // Reset HasCookedMeat
-            HasCookedMeat = false;
-
-            // Disable the cooked steak object
-            cookedSteak.SetActive(false);
-        }
-
-        // Check if the fire is off and there is meat to cook
-        if (!firePlaceLogic.IsFireOn && HasMeat)
-        {
-            // Start cooking again
-            StartCooking();
+            HasCookedMeat = false; // The player has consumed the cooked meat
+            cookedSteak.SetActive(false); // Hide the cooked steak
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    IEnumerator CookingTime()
     {
-        // Check if the player entered the fireplace trigger area
-        if (other.gameObject.CompareTag("Player"))
-        {
-            isCooking = true;
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        // Check if the player exited the fireplace trigger area
-        if (other.gameObject.CompareTag("Player"))
-        {
-            isCooking = false;
-        }
-    }
-
-    private IEnumerator CookingTime()
-    {
-        // Wait for a specific duration even after the fire is on
-        yield return new WaitForSeconds(10f); // Adjust the cooking time as needed
-
-        Debug.Log("CookingTime() was called");
-
-
-            // Enable the steak object
-            steak.SetActive(false);
-
-            // Show the cooked steak object
-            cookedSteak.SetActive(true);
-
-            // Set HasCookedMeat to true after cooking
-            HasCookedMeat = true;
-
-            // Reset HasMeat
-            HasMeat = false;
-        
-
-        // Reset isCooking to allow for future cooking
-        isCooking = false;
-    }
-
-    private void StartCooking()
-    {
-        // Check if there is meat to cook
-        if (HasMeat)
-        {
-            // Start the cooking process
-            StartCoroutine(CookingTime());
-        }
+        yield return new WaitForSeconds(5); // Wait for 5 seconds
+        HasCookedMeat = true; // The player now has cooked meat
+        steak.SetActive(false); // Hide the raw steak
+        cookedSteak.SetActive(true); // Show the cooked steak
     }
 }
